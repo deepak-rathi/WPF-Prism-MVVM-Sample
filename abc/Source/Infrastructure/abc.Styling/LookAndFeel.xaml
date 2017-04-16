@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+
+        <!-- Icons -->
+        <ResourceDictionary Source="/abc.Styling;component/BitmapGraphics/Icons.xaml"/>
+
+        <!-- Fonts -->
+        <ResourceDictionary Source="/abc.Styling;component/Styles/FontFamily.xaml"/>
+        
+        <!-- Styles -->
+        <ResourceDictionary Source="/abc.Styling;component/Styles/Colors.xaml"/>
+        <ResourceDictionary Source="/abc.Styling;component/Styles/DropShadowEffect.xaml"/>
+        <ResourceDictionary Source="/abc.Styling;component/Styles/FontFamily.xaml"/>
+        <ResourceDictionary Source="/abc.Styling;component/Styles/Label.xaml"/>
+        
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

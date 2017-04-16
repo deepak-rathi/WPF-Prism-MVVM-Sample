@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="abc.ModuleSection2.Views.StockDetail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             xmlns:prism="http://www.codeplex.com/prism"
+             lex:LocalizeDictionary.DesignCulture="en-US"        
+             lex:ResxLocalizationProvider.DefaultAssembly="abc.ModuleSection2"
+             lex:ResxLocalizationProvider.DefaultDictionary="Resources"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="500">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="{lex:Loc AddUpdate}"
+                   Grid.Row="0" FontSize="17" TextAlignment="Center"
+                   Margin="10" HorizontalAlignment="Stretch"/>
+        <Grid Grid.Row="1" DataContext="{Binding SelectedStock}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="{lex:Loc StockCode}" Grid.Row="0"/>
+            <TextBox Text="{Binding StockCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0,5,10,10" Padding="5"/>
+
+            <TextBlock Text="{lex:Loc StockName}" Grid.Row="2"/>
+            <TextBox Text="{Binding StockName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" HorizontalAlignment="Stretch" Margin="0,5,10,10" Padding="5"/>
+
+            <TextBlock Text="{lex:Loc IssuingCompany}" Grid.Row="4"/>
+            <TextBox Text="{Binding IssuingCompany, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" HorizontalAlignment="Stretch" Margin="0,5,10,10" Padding="5"/>
+
+            <TextBlock Text="{lex:Loc CurrentPrice}" Grid.Row="6"/>
+            <TextBox Text="{Binding CurrentPrice, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="7" InputScope="Number" HorizontalAlignment="Stretch" Margin="0,5,10,10" Padding="5"/>
+
+            <TextBlock Text="{lex:Loc LastRecordedPrice}" Grid.Row="8"/>
+            <TextBox Text="{Binding LastRecordedPrice, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" IsEnabled="False" Background="LightGray" Grid.Row="9" HorizontalAlignment="Stretch" Margin="0,5,10,10" Padding="5"/>
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Content="{lex:Loc Add}" Margin="0,10" Padding="10"
+                    Command="{Binding AddStockCommand}"/>
+            <Button Content="{lex:Loc Update}" Margin="10" Padding="10"
+                    Command="{Binding UpdateStockCommand}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
