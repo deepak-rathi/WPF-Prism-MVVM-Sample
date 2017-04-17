@@ -98,9 +98,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\abc.Domain\abc.Domain.csproj">
       <Project>{5499451c-82b0-462f-90ab-d095a5192ccf}</Project>

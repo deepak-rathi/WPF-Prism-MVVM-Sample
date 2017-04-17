@@ -3,6 +3,6 @@
 
     <SolidColorBrush x:Key="ContainersBackgroundBrush" Color="#FFFBFBFB"/>
     <SolidColorBrush x:Key="ToolsBorderBrush" Color="#FFB9B8B8"/>
-    <SolidColorBrush x:Key="CCFUserControlNewBrush" Color="#777779" />
+    <SolidColorBrush x:Key="UserControlNewBrush" Color="#777779" />
 
 </ResourceDictionary>

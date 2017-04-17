@@ -141,9 +141,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Converters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Page Include="Views\MainWindow.xaml">
       <SubType>Designer</SubType>

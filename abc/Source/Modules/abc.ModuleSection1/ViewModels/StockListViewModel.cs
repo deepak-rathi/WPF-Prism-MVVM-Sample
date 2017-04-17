@@ -2,6 +2,7 @@
 using abc.Domain.Interfaces;
 using abc.infrastructure.Base;
 using abc.infrastructure.Constants;
+using abc.infrastructure.Events;
 using abc.infrastructure.Extensions;
 using abc.Infrastructure.Events;
 using Prism.Commands;
@@ -9,8 +10,6 @@ using Prism.Logging;
 using Prism.Unity;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System;
-using abc.infrastructure.Events;
 
 namespace abc.ModuleSection1.ViewModels
 {

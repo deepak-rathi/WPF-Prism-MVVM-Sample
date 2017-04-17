@@ -47,10 +47,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="BitmapGraphics\Icons.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="LookAndFeel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,25 +59,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Styles\FontFamily.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Styles\Label.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="BitmapGraphics\Icons\16x16\sample_image.png" />
-    <Content Include="BitmapGraphics\Icons\32x32\sample_image.png" />
-    <Content Include="BitmapGraphics\Icons\delete.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Fonts\HELVETICANEUE-COND.ttf" />
-    <None Include="Fonts\HELVETICANEUELTPRO-BDCN.OTF" />
-    <None Include="Fonts\HELVETICANEUELTPRO-CN.OTF" />
-    <None Include="Fonts\HELVETICANEUELTPRO-MDCN.OTF" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

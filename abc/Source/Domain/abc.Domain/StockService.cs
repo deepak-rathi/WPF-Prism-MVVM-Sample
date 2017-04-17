@@ -1,5 +1,4 @@
-﻿using System;
-using abc.Domain.DTO;
+﻿using abc.Domain.DTO;
 using abc.Domain.Exceptions;
 using abc.Domain.Interfaces;
 using System.Collections.Generic;
@@ -12,6 +11,7 @@ namespace abc.Domain
         private const string _stockNotFound = "Stock Not Found";
         private const string _invalidStock = "Invalid Stock";
 
+        #region Constructor
         public StockService(IStockRepository stockRepository)
         {
             _stockRepository = stockRepository;
@@ -19,6 +19,7 @@ namespace abc.Domain
             AutoMapper.Mapper.CreateMap<StockDTO, Stock>();
             AutoMapper.Mapper.CreateMap<Stock, StockDTO>();
         }
+        #endregion
 
         public Stock GetById(string stockId)
         {

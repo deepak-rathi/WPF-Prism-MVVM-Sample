@@ -79,7 +79,7 @@ namespace abc.ModuleSection2.ViewModels
         }
         #endregion
 
-        #region AddStockCommand
+        #region UpdateStockCommand
         private DelegateCommand _updateStockCommand;
 
         public DelegateCommand UpdateStockCommand
