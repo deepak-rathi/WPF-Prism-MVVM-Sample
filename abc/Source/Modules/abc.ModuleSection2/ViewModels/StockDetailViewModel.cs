@@ -47,6 +47,7 @@ namespace abc.ModuleSection2.ViewModels
         #region EventHandler
         private void StockChanged(Stock stock)
         {
+            if (stock == null) return;
             SelectedStock = new Stock
             {
                 CurrentPrice = stock.CurrentPrice,
