@@ -3,6 +3,7 @@ using abc.Domain.Exceptions;
 using abc.Domain.Interfaces;
 using abc.infrastructure.Base;
 using abc.infrastructure.Constants;
+using abc.infrastructure.Events;
 using abc.Infrastructure.Events;
 using Prism.Commands;
 using Prism.Logging;
@@ -46,7 +47,15 @@ namespace abc.ModuleSection2.ViewModels
         #region EventHandler
         private void StockChanged(Stock stock)
         {
-            SelectedStock = stock;
+            SelectedStock = new Stock
+            {
+                CurrentPrice = stock.CurrentPrice,
+                Id = stock.Id,
+                IssuingCompany = stock.IssuingCompany,
+                LastRecordedPrice = stock.LastRecordedPrice,
+                StockCode = stock.StockCode,
+                StockName = stock.StockName
+            };
         }
         #endregion
 
@@ -91,7 +100,7 @@ namespace abc.ModuleSection2.ViewModels
                     try
                     {
                         var stock = _stockService.UpdateStock(SelectedStock);
-                        EventAggregator.GetEvent<StockAddedEvent>().Publish(stock);
+                        EventAggregator.GetEvent<StockUpdatedEvent>().Publish(stock);
                         MessageBox.Show("Updated successfuly");
                         SelectedStock = new Stock();
                     }
