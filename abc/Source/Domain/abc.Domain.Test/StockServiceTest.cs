@@ -91,7 +91,7 @@ namespace abc.Domain.Test
         }
 
         [TestMethod, ExpectedException(typeof(StockNotFoundException))]
-        public void DeleteStock_InalidStockId_DeletesStock()
+        public void DeleteStock_InvalidStockId_DeletesStock()
         {
             Stock updatedStock = _stockService.DeleteStockById(InvalidStockId);
             Assert.IsInstanceOfType(updatedStock, typeof(Stock));
